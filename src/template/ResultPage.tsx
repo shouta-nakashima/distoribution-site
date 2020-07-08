@@ -1,6 +1,7 @@
 import React, {FC} from 'react'
 import Pencil from '../assets/img/pencil.jpg'
 import {createStyles,makeStyles} from '@material-ui/core/styles'
+import ResultImageList from '../components/ResultImageList'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -17,7 +18,7 @@ const ResultPage: FC = () => {
   const classes = useStyles()
   return (
     <div className={classes.backGround}>
-      ResultPage 検索結果 
+      <ResultImageList /> 
     </div>
   )
 }
