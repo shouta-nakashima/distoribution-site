@@ -15,15 +15,9 @@ const TopPage: FC = () => {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/">
-          <TopMain />
-        </Route>
-        <Route path="/search/:keyword" exact>
-          <ResultPage />
-        </Route>
-        <Route path="/download/:keyword" exact>
-          <DownLoadPage />
-        </Route>
+        <Route exact path={"/"} component={TopMain}/>
+        <Route exact path={"/search/:keyword"} component={ResultPage} />
+        <Route exact path={"/download/:keyword"} component={DownLoadPage}/>
       </Switch>
     </Router>
   );

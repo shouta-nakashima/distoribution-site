@@ -8,8 +8,8 @@ import Button from '@material-ui/core/Button'
 const useStyles = makeStyles(() =>
   createStyles({
     image: {
-      maxHeight: '400px',
-      maxWidth: '400px',
+      maxHeight: '300px',
+      maxWidth: '300px',
       padding: '0 10px'
     },
     root: {
@@ -49,14 +49,14 @@ const ResultImageList: FC = () => {
 
   return (
     <div className={classes.root}>
-      {data.map((tile) => (
-        <div key={tile.title}>
+      {data.map((props) => (
+        <div key={props.title} >
           <Button
-            onClick={() => history.push("/download/" + tile.title)}
+            onClick={() => history.push("/download/" + props.title)}
           >
-            <img className={classes.image} src={tile.image} alt={tile.title} />
+            <img className={classes.image} src={props.image} alt={props.title} />
           </Button>
-          <h3>{tile.title}</h3>
+          <h3>{props.title}</h3>
         </div>
       ))}
     </div>
